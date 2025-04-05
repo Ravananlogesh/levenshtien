@@ -67,6 +67,12 @@ func LevenshteinDistance(a, b string) int {
 }
 // ============ STRING SIMILARITY ===============
 // Similarity returns a value between 0.0 and 100.0
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
 
 func Similarity(a, b string) float64 {
 	dist := LevenshteinDistance(a, b)
